@@ -1,5 +1,9 @@
 import streamlit as st
 
-st.title("MNIST Test App")
+st.title("TensorFlow Test")
 
-st.write("Streamlit is working!")
+try:
+    import tensorflow as tf
+    st.success(f"TensorFlow installed: {tf.__version__}")
+except Exception as e:
+    st.error(str(e))
